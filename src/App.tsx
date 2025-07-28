@@ -1,13 +1,22 @@
+import AsideMenu from "./components/AsideMenu";
 import Header from "./components/Header";
+import { useAsideMenu } from "./hooks/useAsideMenu";
 
 function App() {
+  const { isOpen, handleOpenMenu } = useAsideMenu();
   return (
     <main className="relative">
-      <Header />
-      <section className="h-screen object-cover w-full bg-cover bg-no-repeat mask-l-from-80% mask-linear-to-80% mask-linear-to-primary-color">
-        <img className=" mask-linear-from-primary-color" src="/background.jpg" alt="" />
-      teste</section>
-      <section className="h-screen">teste</section>
+      <title>Grupo Liferio</title>
+      <Header handleMenu={handleOpenMenu} />
+      {isOpen && <AsideMenu />}
+      <section className="h-screen object-cover w-full mask-primary-color">
+        <img
+          className="mask-r-from-50% mask-primary-color"
+          src="/background.jpg"
+          alt="Imagem de fundo de dois idosos juntos."
+        />
+        teste
+      </section>
     </main>
   );
 }

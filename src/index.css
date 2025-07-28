@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
 @theme {
+  --font-open-sans: "Open Sans", sans-serif;
   --color-white: #ffffe8;
   --color-primary-color: #0b1f52;
   --color-secondary-color: #0bc0a2;
