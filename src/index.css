@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #ffffe8;
+  --color-primary-color: #0b1f52;
+  --color-secondary-color: #0bc0a2;
+  --color-text-colors: #949494;
+  --text-desktop-title: 32px;
+  --text-desktop-subtitle: 24px;
+  --text-desktop-text: 16px;
+  --text-mobile: 24px;
+  --text-mobile-subtitle: 16px;
+  --text-mobile-text: 12px;
+}
