@@ -8,7 +8,7 @@ export default function BackToTopButton() {
     <>
       {scrolledHeight >= 300 && (
         <button
-          className="bg-primary-color fixed bottom-[3%] right-[3%] p-4 text-white text-desktop-title rounded-full cursor-pointer"
+          className="bg-primary-color fixed bottom-[3%] right-[3%] p-4 text-white text-desktop-title rounded-full cursor-pointer z-10"
           onClick={backToTop}
         >
           <TbSquareRoundedArrowUpFilled />
