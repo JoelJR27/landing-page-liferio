@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 export default function AsideMenu() {
   return (
     <aside className="bg-primary-color h-screen w-[70%] fixed z-100 flex justify-center p-10">
-      <nav className="font-open-sans text-center text-white text-mobile-subtitle flex flex-col justify-between xsm:text-mobile">
+      <nav className="text-center text-white text-mobile-subtitle flex flex-col justify-between xsm:text-mobile">
         <ul className="flex flex-col gap-4">
           <li>
             <Link to={"/"}>Home</Link>
