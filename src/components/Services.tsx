@@ -5,7 +5,7 @@ import { IoNutrition } from "react-icons/io5";
 import { IoIosMedkit } from "react-icons/io";
 export default function Services() {
   return (
-    <section className="h-screen p-4 gap-4 flex flex-col items-center xs:p-8 w-full">
+    <section className="mb-10 p-4 gap-4 flex flex-col items-center xs:p-8 w-full">
       <h3 className="text-primary-color font-bold text-mobile mb-4 lg:text-desktop-title">
         Nossos Serviços
       </h3>
