@@ -37,7 +37,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
               <Link to={"/sobre"}>Sobre nós</Link>{" "}
             </li>
             <li>
-              <Link to={"trabalhe-conosco"}>Trabalhe conosco</Link>
+              <Link to={"/trabalhe-conosco"}>Trabalhe conosco</Link>
             </li>
           </ul>
         </nav>
