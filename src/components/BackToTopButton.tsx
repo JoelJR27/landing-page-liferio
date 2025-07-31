@@ -3,7 +3,6 @@ import { useScroll } from "../hooks/useScroll";
 
 export default function BackToTopButton() {
   const { scrolledHeight, backToTop } = useScroll();
-  console.log(scrolledHeight);
   return (
     <>
       {scrolledHeight >= 300 && (
