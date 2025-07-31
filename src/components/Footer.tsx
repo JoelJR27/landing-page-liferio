@@ -10,6 +10,9 @@ export default function Footer() {
       <nav className="text-center text-white text-mobile-subtitle mb-8 flex flex-col justify-between xsm:text-mobile">
         <ul className="flex flex-col gap-4 md:flex-row md:justify-center md:gap-10">
           <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
             <Link to={"/contatos"}>Contatos</Link>
           </li>
           <li>
@@ -19,7 +22,7 @@ export default function Footer() {
             <Link to={"/sobre"}>Sobre nós</Link>{" "}
           </li>
           <li>
-            <Link to={"trabalhe-conosco"}>Trabalhe conosco</Link>
+            <Link to={"/trabalhe-conosco"}>Trabalhe conosco</Link>
           </li>
         </ul>
       </nav>
