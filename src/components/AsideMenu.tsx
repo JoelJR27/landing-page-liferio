@@ -20,7 +20,7 @@ export default function AsideMenu() {
             <Link to={"/sobre"}>Sobre nós</Link>{" "}
           </li>
           <li>
-            <Link to={"trabalhe-conosco"}>Trabalhe conosco</Link>
+            <Link to={"/trabalhe-conosco"}>Trabalhe conosco</Link>
           </li>
           <li className="mt-5 flex justify-center">
             <div className="flex text-mobile gap-4 xsm:text-4xl">
