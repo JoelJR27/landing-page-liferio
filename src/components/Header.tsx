@@ -12,7 +12,7 @@ type HeaderProps = {
 export default function Header({ isOpen, handleMenu }: HeaderProps) {
   const deviceWidth = useDeviceWidth();
   return (
-    <header className="bg-primary-color sticky top-0 flex z-10 justify-between items-center px-4 lg:justify-around">
+    <header className="bg-primary-color sticky top-0 flex z-10 justify-between items-center px-4 shadow-2xl lg:justify-around">
       <button
         className="text-white text-4xl cursor-pointer lg:hidden"
         onClick={handleMenu}
