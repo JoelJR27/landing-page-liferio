@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section className="mb-10 p-4 gap-4 flex flex-col items-center xs:p-8 w-full">
       <h3 className="text-primary-color font-bold text-mobile mb-4 lg:text-desktop-title">
-        Nossos Serviços
+        Oferecemos serviços como:
       </h3>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
         <img
