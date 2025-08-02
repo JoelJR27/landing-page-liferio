@@ -14,6 +14,7 @@ export default function Services() {
           className="rounded-xl"
           src="/servicos-imagem.jpg"
           alt="Imagem de um idoso recebendo cuidados em sua casa."
+          loading="lazy"
         />
         <ul className="text-text-colors font-semibold flex flex-col gap-2 md:text-mobile lg:text-desktop-text lg:gap-8 xl:text-desktop-subtitle">
           <ListItem icon={<RiTeamLine />}>Equipe Multidisciplinar</ListItem>

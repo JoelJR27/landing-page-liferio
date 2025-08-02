@@ -9,6 +9,7 @@ export default function Hero() {
           className="mask-r-from-30% mask-primary-color blur-[.5px] object-cover lg:mask-r-from-20%"
           src="/background.jpg"
           alt="Imagem de fundo de um casal de idosos se abraçando."
+          loading="lazy"
         />
         {deviceWidth >= 1024 && (
           <>

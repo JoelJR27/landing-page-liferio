@@ -24,6 +24,7 @@ export default function Contact() {
           className="w-full blur-[.5px] lg:rounded"
           src="/fundo-contatos.jpg"
           alt="Imagem de fundo onde uma mulher está usando seu notebook e telefonando."
+          loading="lazy"
         />
         <article className="">
           <h1 className="text-primary-color text-mobile font-bold p-4 xl:text-desktop-title">

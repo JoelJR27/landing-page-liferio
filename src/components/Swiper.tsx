@@ -61,6 +61,7 @@ function SwiperImage({ imagePath }: SwiperImageProps) {
       className="rounded-2xl min-w-[250px] max-h-[250px] transition-all shadow-lg xsm:min-w-[320px] xsm:max-h-[320px]"
       src={imagePath}
       alt="Carrossel com imagens dos produtos ofertados pela Life Rio"
+      loading="lazy"
     />
   );
 }

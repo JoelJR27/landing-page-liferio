@@ -29,10 +29,11 @@ export default function OurServices() {
           className="md:rounded-2xl"
           src="/fundo-servicos.png"
           alt="Médico segurando uma prancheta."
+          loading="lazy"
         />
-        <h2 className="text-secondary-color font-bold text-mobile mt-5 lg:text-desktop-title">
+        <h1 className="text-secondary-color font-bold text-mobile mt-5 lg:text-desktop-title">
           Nossos Serviços:
-        </h2>
+        </h1>
         <section className="p-4 xsm:p-8 flex flex-col gap-10 md:grid md:grid-cols-2 xl:grid-cols-3">
           <ServicesCard
             icon={<RiTeamFill />}

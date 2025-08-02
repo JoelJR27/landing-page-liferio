@@ -72,6 +72,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
           className="w-[100px] h-[100px]"
           src={logoLiferio}
           alt="Logo da Life Rio"
+          loading="lazy"
         />
       </div>
     </header>

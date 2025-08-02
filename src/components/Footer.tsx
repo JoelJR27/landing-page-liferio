@@ -46,6 +46,7 @@ export default function Footer() {
             className="w-[100px] h-[100px]"
             src={logoLiferio}
             alt="Logo da Life Rio"
+            loading="lazy"
           />
           <div className="flex text-white text-mobile gap-4 xsm:text-4xl">
             <a
