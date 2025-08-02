@@ -13,16 +13,16 @@ export default function Footer() {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"contatos"}>Contatos</Link>
+            <Link to={"/contatos"}>Contatos</Link>
           </li>
           <li>
-            <Link to={"servicos"}>Serviços</Link>
+            <Link to={"/servicos"}>Serviços</Link>
           </li>
           <li>
-            <Link to={"sobre"}>Sobre nós</Link>{" "}
+            <Link to={"/sobre"}>Sobre nós</Link>{" "}
           </li>
           <li>
-            <Link to={"trabalhe-conosco"}>Trabalhe conosco</Link>
+            <Link to={"/trabalhe-conosco"}>Trabalhe conosco</Link>
           </li>
         </ul>
       </nav>
