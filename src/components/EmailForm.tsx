@@ -32,10 +32,11 @@ export default function EmailForm() {
         }}
       />
       <button
-        className="text-white text-[18px] font-semibold bg-secondary-color rounded-[4px] text-center p-4 cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
+        className="flex text-white text-[18px] font-semibold bg-secondary-color rounded-[4px] text-center cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
         disabled={emailData?.subject && emailData.body ? false : true}
       >
         <a
+        className="w-full p-4 "
           href={`mailto:contatohomecarerio@gmail.com?subject=${emailData?.subject}&body=${emailData?.body}`}
         >
           Enviar
