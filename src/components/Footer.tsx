@@ -21,9 +21,6 @@ export default function Footer() {
           <li>
             <Link to={"/sobre"}>Sobre nós</Link>{" "}
           </li>
-          <li>
-            <Link to={"/trabalhe-conosco"}>Trabalhe conosco</Link>
-          </li>
         </ul>
       </nav>
       <section className="flex flex-col gap-10 md:flex-row md:items-center md:justify-around">
