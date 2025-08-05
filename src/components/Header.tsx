@@ -1,10 +1,11 @@
 import logoLiferio from "/logo-liferio.jpeg";
-import { Link } from "react-router-dom";
+import Link from "../components/Link";
 import { useDeviceWidth } from "../hooks/useDeviceWidth";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoWhatsapp, IoMdMenu } from "react-icons/io";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
+import { AnimatePresence, motion } from "motion/react";
 type HeaderProps = {
   isOpen: boolean;
   handleMenu(): void;
@@ -12,29 +13,50 @@ type HeaderProps = {
 export default function Header({ isOpen, handleMenu }: HeaderProps) {
   const deviceWidth = useDeviceWidth();
   return (
-    <header className="bg-primary-color sticky top-0 flex z-10 justify-between items-center px-4 shadow-2xl lg:justify-around">
+    <motion.header
+      initial={{ y: -250 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
+      className="bg-primary-color sticky top-0 flex z-10 justify-between items-center px-4 shadow-2xl lg:justify-around"
+    >
       <button
         className="text-white text-4xl cursor-pointer lg:hidden"
         onClick={handleMenu}
       >
-        {isOpen ? <IoMdCloseCircleOutline /> : <IoMdMenu />}
+        <AnimatePresence>
+          {isOpen ? <IoMdCloseCircleOutline /> : <IoMdMenu />}
+        </AnimatePresence>
       </button>
       {deviceWidth >= 1024 && (
         <nav className="font-open-sans text-center text-white font-semibold text-desktop-subtitle flex">
-          <ul className="flex gap-4 xl:gap-10">
+          <ul className="flex gap-6 xl:gap-10">
             <li>
-              <Link className="" to={"/"}>
+              <Link targetBlank={false} linkType="iconButton" href="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link to={"/contatos"}>Contatos</Link>
+              <Link
+                targetBlank={false}
+                linkType="iconButton"
+                href={"/contatos"}
+              >
+                Contatos
+              </Link>
             </li>
             <li>
-              <Link to={"/servicos"}>Serviços</Link>
+              <Link
+                targetBlank={false}
+                linkType="iconButton"
+                href={"/servicos"}
+              >
+                Serviços
+              </Link>
             </li>
             <li>
-              <Link to={"/sobre"}>Sobre nós</Link>{" "}
+              <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
+                Sobre nós
+              </Link>{" "}
             </li>
           </ul>
         </nav>
@@ -42,27 +64,27 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
       <div className="flex text-4xl gap-4">
         {deviceWidth >= 1024 && (
           <div className="flex gap-2 items-center text-desktop-subtitle text-white">
-            <a
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="http://wa.me/5521969672912"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <IoLogoWhatsapp />
-            </a>
-            <a
+            </Link>
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="https://www.instagram.com/grupoliferio/"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <FiInstagram />
-            </a>
-            <a
+            </Link>
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="https://web.facebook.com/profile.php?id=61551433251031"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <FaFacebook />
-            </a>
+            </Link>
           </div>
         )}
         <img
@@ -72,6 +94,6 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
           loading="lazy"
         />
       </div>
-    </header>
+    </motion.header>
   );
 }

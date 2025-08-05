@@ -1,27 +1,13 @@
 import { Accordions } from "../components/Accordion";
-import AsideMenu from "../components/AsideMenu";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import InfosBanner from "../components/InfosBanner";
 import Location from "../components/Location";
 import Products from "../components/Products";
 import Services from "../components/Services";
-import { useAsideMenu } from "../hooks/useAsideMenu";
-import { useDeviceWidth } from "../hooks/useDeviceWidth";
 
 export default function Home() {
-  const { isOpen, handleOpenMenu } = useAsideMenu();
-  const deviceWidth = useDeviceWidth();
   return (
     <>
-      <Header isOpen={isOpen} handleMenu={handleOpenMenu} />
-      {isOpen && deviceWidth < 1024 && (
-        <>
-          <div className="w-full h-screen fixed z-1 bg-black opacity-60"></div>
-          <AsideMenu />
-        </>
-      )}
       <Hero />
       <InfosBanner />
       <Services />
@@ -51,7 +37,6 @@ export default function Home() {
         </Accordions.Divider>
       </Accordions.Container>
       <Location />
-      <Footer />
     </>
   );
 }

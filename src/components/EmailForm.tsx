@@ -1,10 +1,10 @@
-import { useRef, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import type { EmailData } from "../types/EmailData";
+import Link from "./Link";
+import { AnimatePresence } from "motion/react";
 
 export default function EmailForm() {
   const [emailData, setEmailData] = useState<EmailData | null>(null);
-  const subjectRef = useRef<HTMLInputElement | null>(null);
-  const bodyRef = useRef<HTMLTextAreaElement | null>(null);
 
   return (
     <form
@@ -12,7 +12,6 @@ export default function EmailForm() {
       onSubmit={(event: FormEvent) => event.preventDefault()}
     >
       <input
-        ref={subjectRef}
         className="p-2 placeholder:text-text-colors rounded-[4px] outline outline-text-colors "
         type="text"
         placeholder="Assunto"
@@ -24,24 +23,23 @@ export default function EmailForm() {
         }
       />
       <textarea
-        ref={bodyRef}
         className="p-3 h-30 placeholder:text-text-colors rounded-[4px] outline outline-text-colors "
         placeholder="Escreva sua mensagem aqui"
         onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
           setEmailData({ ...emailData, body: event.target?.value });
         }}
       />
-      <button
-        className="flex text-white text-[18px] font-semibold bg-secondary-color rounded-[4px] text-center cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
-        disabled={emailData?.subject && emailData.body ? false : true}
-      >
-        <a
-        className="w-full p-4 "
-          href={`mailto:contatohomecarerio@gmail.com?subject=${emailData?.subject}&body=${emailData?.body}`}
-        >
-          Enviar
-        </a>
-      </button>
+      <AnimatePresence>
+        {emailData?.subject && emailData.body && (
+          <Link
+          targetBlank
+            linkType="link"
+            href={`mailto:contatohomecarerio@gmail.com?subject=${emailData?.subject}&body=${emailData?.body}`}
+          >
+            Enviar
+          </Link>
+        )}
+      </AnimatePresence>
     </form>
   );
 }

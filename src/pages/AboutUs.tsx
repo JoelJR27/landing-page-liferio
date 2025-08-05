@@ -1,23 +1,6 @@
-import AsideMenu from "../components/AsideMenu";
-import BackToTopButton from "../components/BackToTopButton";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import { useAsideMenu } from "../hooks/useAsideMenu";
-import { useDeviceWidth } from "../hooks/useDeviceWidth";
-
 export default function AboutUs() {
-  const { isOpen, handleOpenMenu } = useAsideMenu();
-  const deviceWidth = useDeviceWidth();
   return (
     <>
-      <Header isOpen={isOpen} handleMenu={handleOpenMenu} />
-      <BackToTopButton />
-      {isOpen && deviceWidth < 1024 && (
-        <>
-          <div className="w-full h-screen fixed z-1 bg-black opacity-60"></div>
-          <AsideMenu />
-        </>
-      )}
       <section className="p-5 lg:py-10 lg:px-20 2xl:px-30">
         <article>
           <h1 className="text-primary-color font-black text-mobile lg:text-desktop-title">
@@ -72,7 +55,6 @@ export default function AboutUs() {
           </Card>
         </section>
       </section>
-      <Footer />
     </>
   );
 }
@@ -95,7 +77,9 @@ type ChildrenProp = {
 };
 function Card({ children }: ChildrenProp) {
   return (
-    <article className="shadow-2xl h-fit w-full rounded p-8 ">{children}</article>
+    <article className="shadow-2xl h-fit w-full rounded p-8 ">
+      {children}
+    </article>
   );
 }
 
