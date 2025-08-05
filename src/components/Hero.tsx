@@ -1,4 +1,5 @@
 import { useDeviceWidth } from "../hooks/useDeviceWidth";
+import Link from "./Link";
 
 export default function Hero() {
   const deviceWidth = useDeviceWidth();
@@ -22,14 +23,10 @@ export default function Hero() {
                 proporcionar o <strong>bem-estar</strong> e{" "}
                 <strong>qualidade de vida</strong> para quem mais amamos.
               </p>
-              <a
-                href="http://wa.me/5521969672912"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-secondary-color inline-block p-2 font-bold text-white rounded xl:text-desktop-subtitle"
-              >
+
+              <Link targetBlank linkType="link" href="http://wa.me/5521969672912">
                 Conheça nossos serviços
-              </a>
+              </Link>
             </div>
           </>
         )}
@@ -45,14 +42,9 @@ export default function Hero() {
               Acreditamos no poder do cuidado para proporcionar o bem-estar e
               qualidade de vida para quem mais amamos.
             </p>
-            <a
-              href="http://wa.me/5521969672912"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-secondary-color w-fit p-2 font-bold text-white rounded"
-            >
+            <Link targetBlank linkType="link" href="http://wa.me/5521969672912">
               Conheça nossos serviços
-            </a>
+            </Link>
           </div>
         </>
       )}

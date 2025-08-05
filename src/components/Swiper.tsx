@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { motion } from "motion/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useDeviceWidth } from "../hooks/useDeviceWidth";
 import { useImagesSwiper } from "../hooks/useImagesSwiper";
@@ -45,19 +46,33 @@ function SwiperButton({
   handleCurrentImage,
 }: SwiperButtonProps) {
   return (
-    <button
+    <motion.button
+      whileHover={{ opacity: 0.7, scale: 1.2 }}
       className="bg-secondary-color p-1 absolute top-[50%] text-white rounded-full text-mobile cursor-pointer z-1"
       style={positionSide}
       onClick={handleCurrentImage}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
 type SwiperImageProps = { imagePath: string };
 function SwiperImage({ imagePath }: SwiperImageProps) {
+  const variants = {
+    enter: {
+      opacity: 0,
+    },
+    exit: {
+      opacity: 1,
+    },
+  };
   return (
-    <img
+    <motion.img
+      key={imagePath}
+      variants={variants}
+      initial="enter"
+      animate="exit"
+      transition={{ duration: 1 }}
       className="rounded-2xl min-w-[250px] max-h-[250px] transition-all shadow-lg xsm:min-w-[320px] xsm:max-h-[320px]"
       src={imagePath}
       alt="Carrossel com imagens dos produtos ofertados pela Life Rio"

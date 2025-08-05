@@ -1,8 +1,8 @@
 import logoLiferio from "/logo-liferio.jpeg";
 import { FaFacebook } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import { IoLogoWhatsapp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { IoLogoWhatsapp} from "react-icons/io";
+import Link from "./Link";
 
 export default function Footer() {
   return (
@@ -10,16 +10,24 @@ export default function Footer() {
       <nav className="text-center text-white text-mobile-subtitle mb-8 flex flex-col justify-between xsm:text-mobile">
         <ul className="flex flex-col gap-4 md:flex-row md:justify-center md:gap-10">
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link targetBlank={false} linkType="iconButton" href={"/"}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/contatos"}>Contatos</Link>
+            <Link targetBlank={false} linkType="iconButton" href={"/contatos"}>
+              Contatos
+            </Link>
           </li>
           <li>
-            <Link to={"/servicos"}>Serviços</Link>
+            <Link targetBlank={false} linkType="iconButton" href={"/servicos"}>
+              Serviços
+            </Link>
           </li>
           <li>
-            <Link to={"/sobre"}>Sobre nós</Link>{" "}
+            <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
+              Sobre nós
+            </Link>{" "}
           </li>
         </ul>
       </nav>
@@ -46,27 +54,27 @@ export default function Footer() {
             loading="lazy"
           />
           <div className="flex text-white text-mobile gap-4 xsm:text-4xl">
-            <a
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="http://wa.me/5521969672912"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <IoLogoWhatsapp />
-            </a>
-            <a
+            </Link>
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="https://www.instagram.com/grupoliferio/"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <FiInstagram />
-            </a>
-            <a
+            </Link>
+            <Link
+              targetBlank
+              linkType="iconButton"
               href="https://web.facebook.com/profile.php?id=61551433251031"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <FaFacebook />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,24 +1,12 @@
-import AsideMenu from "../components/AsideMenu";
 import EmailForm from "../components/EmailForm";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import { useAsideMenu } from "../hooks/useAsideMenu";
-import { useDeviceWidth } from "../hooks/useDeviceWidth";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
+import Link from "../components/Link";
+import { AnimatePresence } from "motion/react";
 
 export default function Contact() {
-  const { isOpen, handleOpenMenu } = useAsideMenu();
-  const deviceWidth = useDeviceWidth();
   return (
     <>
-      <Header isOpen={isOpen} handleMenu={handleOpenMenu} />
-      {isOpen && deviceWidth < 1024 && (
-        <>
-          <div className="w-full h-screen fixed z-1 bg-black opacity-60"></div>
-          <AsideMenu />
-        </>
-      )}
       <section className="lg:p-8 lg:grid lg:grid-cols-2 xl:py-16 xl:px-32">
         <img
           className="w-full blur-[.5px] lg:rounded"
@@ -52,14 +40,11 @@ export default function Contact() {
               </h3>
             </li>
             <li className="mt-5 ml-6">
-              <a
-                href="http://wa.me/5521969672912"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-secondary-color w-fit inline-block p-2 font-bold text-white rounded lg:text-[20px]"
-              >
-                Enviar uma mensagem
-              </a>
+              <AnimatePresence>
+                <Link targetBlank linkType="link" href="http://wa.me/5521969672912">
+                  Enviar uma mensagem
+                </Link>
+              </AnimatePresence>
             </li>
           </ul>
         </article>
@@ -70,7 +55,6 @@ export default function Contact() {
         </h2>
         <EmailForm />
       </section>
-      <Footer />
     </>
   );
 }

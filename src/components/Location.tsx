@@ -1,6 +1,8 @@
+import Link from "./Link";
+
 export default function Location() {
   return (
-    <section className="p-4 lg:p-8">
+    <section className="p-8 lg:p-10">
       <h3 className="text-primary-color text-mobile font-bold mb-4 lg:text-desktop-title">
         Onde nos encontrar?
       </h3>
@@ -16,14 +18,7 @@ export default function Location() {
             assistência até o conforto do seu lar.
           </p>
 
-          <a
-            href="http://wa.me/5521969672912"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-secondary-color w-fit inline-block p-2 font-bold text-white rounded xl:text-desktop-subtitle"
-          >
-            Área de atendimento
-          </a>
+          <Link targetBlank linkType="link" href="http://wa.me/5521969672912">Área de atendimento</Link>
         </div>
 
         <iframe
