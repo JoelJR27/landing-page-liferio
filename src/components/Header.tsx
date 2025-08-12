@@ -29,7 +29,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
       </button>
       {deviceWidth >= 1024 && (
         <nav className="font-open-sans text-center text-white font-semibold text-desktop-subtitle flex">
-          <ul className="flex gap-6 xl:gap-10">
+          <ul className="flex gap-6 xl:gap-8">
             <li>
               <Link targetBlank={false} linkType="iconButton" href="/">
                 Home
@@ -56,6 +56,24 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
             <li>
               <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
                 Sobre nós
+              </Link>{" "}
+            </li>
+            <li>
+              <Link
+                targetBlank={false}
+                linkType="iconButton"
+                href={"/trabalhe-conosco"}
+              >
+                Trabalhe conosco
+              </Link>{" "}
+            </li>
+            <li>
+              <Link
+                targetBlank={false}
+                linkType="iconButton"
+                href={"/life-kids"}
+              >
+                Life Kids
               </Link>{" "}
             </li>
           </ul>

@@ -1,6 +1,6 @@
 import Link from "./Link";
 import { motion } from "motion/react";
-import { IoLogoWhatsapp} from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebook } from "react-icons/fa";
 export default function AsideMenu() {
@@ -32,6 +32,20 @@ export default function AsideMenu() {
           <li>
             <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
               Sobre nós
+            </Link>{" "}
+          </li>
+          <li>
+            <Link
+              targetBlank={false}
+              linkType="iconButton"
+              href={"/trabalhe-conosco"}
+            >
+              Trabalhe conosco
+            </Link>{" "}
+          </li>
+          <li>
+            <Link targetBlank={false} linkType="iconButton" href={"/life-kids"}>
+              Life Kids
             </Link>{" "}
           </li>
           <li className="mt-5 flex justify-center">

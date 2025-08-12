@@ -1,7 +1,7 @@
 import logoLiferio from "/logo-liferio.jpeg";
 import { FaFacebook } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import { IoLogoWhatsapp} from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "./Link";
 
 export default function Footer() {
@@ -27,6 +27,20 @@ export default function Footer() {
           <li>
             <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
               Sobre nós
+            </Link>{" "}
+          </li>
+          <li>
+            <Link
+              targetBlank={false}
+              linkType="iconButton"
+              href={"/trabalhe-conosco"}
+            >
+              Trabalhe conosco
+            </Link>{" "}
+          </li>
+          <li>
+            <Link targetBlank={false} linkType="iconButton" href={"/life-kids"}>
+              Life Kids
             </Link>{" "}
           </li>
         </ul>
