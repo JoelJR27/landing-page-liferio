@@ -56,27 +56,3 @@ function SwiperButton({
     </motion.button>
   );
 }
-type SwiperImageProps = { imagePath: string };
-function SwiperImage({ imagePath }: SwiperImageProps) {
-  const variants = {
-    enter: {
-      opacity: 0,
-    },
-    exit: {
-      opacity: 1,
-    },
-  };
-  return (
-    <motion.img
-      key={imagePath}
-      variants={variants}
-      initial="enter"
-      animate="exit"
-      transition={{ duration: 1 }}
-      className="rounded-2xl min-w-[250px] max-h-[250px] transition-all shadow-lg xsm:min-w-[320px] xsm:max-h-[320px]"
-      src={imagePath}
-      alt="Carrossel com imagens dos produtos ofertados pela Life Rio"
-      loading="lazy"
-    />
-  );
-}

@@ -1,14 +1,18 @@
 import React, { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loading from "./components/Loading";
+import NavigationError from "./components/NavigationError.tsx";
+
 const LazyHome = React.lazy(() => import("./pages/Home"));
 const LazyContact = React.lazy(() => import("./pages/Contact"));
 const LazyOurServices = React.lazy(() => import("./pages/OurServices"));
 const LazyAboutUs = React.lazy(() => import("./pages/AboutUs"));
-import App from "./App.tsx";
-import NavigationError from "./components/NavigationError.tsx";
+const LazyWorkWithUs = React.lazy(() => import("./pages/WorkWithUs.tsx"));
+const LazyLifeKids = React.lazy(() => import("./pages/LifeKids.tsx"));
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +48,22 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <LazyAboutUs />
+          </Suspense>
+        ),
+      },
+      {
+        path: "trabalhe-conosco",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <LazyWorkWithUs />
+          </Suspense>
+        ),
+      },
+      {
+        path: "life-kids",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <LazyLifeKids />
           </Suspense>
         ),
       },
