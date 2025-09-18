@@ -1,4 +1,4 @@
-import logoLiferio from "/logo-liferio.jpeg";
+import logoLiferio from "/logo-liferio.webp";
 import { FaFacebook } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -6,63 +6,53 @@ import Link from "./Link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-color p-15 font-open-sans">
-      <nav className="text-center text-white text-mobile-subtitle mb-8 flex flex-col justify-between xsm:text-mobile">
-        <ul className="flex flex-col gap-4 md:flex-row md:justify-center md:gap-10">
-          <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/"}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/contatos"}>
-              Contatos
-            </Link>
-          </li>
-          <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/servicos"}>
-              Serviços
-            </Link>
-          </li>
-          <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
-              Sobre nós
-            </Link>{" "}
-          </li>
-          <li>
-            <Link
-              targetBlank={false}
-              linkType="iconButton"
-              href={"/trabalhe-conosco"}
-            >
-              Trabalhe conosco
-            </Link>{" "}
-          </li>
-          <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/life-kids"}>
-              Life Kids
-            </Link>{" "}
-          </li>
-        </ul>
-      </nav>
-      <section className="flex flex-col gap-10 md:flex-row md:items-center md:justify-around">
-        <div className="text-secondary-color xl:text-[20px] text-center md:text-start">
+    <footer className="bg-primary-color p-8 lg:py-15 lg:px-8 font-open-sans">
+      <section className="flex flex-col gap-10 xl:flex-row md:items-center md:justify-around">
+        <div className="text-white xl:text-[20px] text-center xl:text-start">
           <h4>
-            CNPJ <strong>33.141.166/0001-87</strong>
+            CNPJ{" "}
+            <strong className="text-secondary-color">33.141.166/0001-87</strong>
           </h4>
           <h4>
-            Life Rio <strong>Assistência em Saúde</strong>
+            Telefone:{" "}
+            <strong className="text-secondary-color">(21) 96967-2912</strong>
           </h4>
           <h4>
-            Telefone: <strong>(21) 96967-2912</strong>
+            E-mail para contato:{" "}
+            <strong className="text-secondary-color">
+              {" "}
+              contatoliferio@gmail.com
+            </strong>
           </h4>
-          <h4>
-            E-mail para contato: <strong> contatohomecarerio@gmail.com</strong>
-          </h4>
+          <h4 className="font-bold">Life Rio Assistência em Saúde</h4>
         </div>
-        <div className="flex items-center justify-center gap-10 ">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-secondary-color">Unidades</h3>
+          <ul className="flex flex-col gap-2 py-2 text-white text-lg">
+            <li>Rio de Janeiro</li>
+            <li>Minas Gerais</li>
+            <li>São Paulo</li>
+            <li>Brasília</li>
+            <li>Espírito Santo</li>
+          </ul>
+        </div>
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-secondary-color mb-4">
+            HORÁRIO DE FUNCIONAMENTO
+          </h3>
+          <h4 className="text-secondary-color text-lg font-medium">
+            24H - Todos os dias!
+          </h4>
+          <p className="text-white">
+            <i>
+              Estamos aqui por você, 24h por dia, oferecendo cuidado e conforto
+              no seu lar.
+            </i>
+          </p>
+        </div>
+        <div className="flex items-center justify-center">
           <img
-            className="w-[100px] h-[100px]"
+            className="w-[120px] h-[120px] lg:w-[150px] lg:h-[150px]"
             src={logoLiferio}
             alt="Logo da Life Rio"
             loading="lazy"
@@ -90,6 +80,22 @@ export default function Footer() {
               <FaFacebook />
             </Link>
           </div>
+        </div>
+      </section>
+      <section className="text-white text-center  lg:mt-20 flex flex-col gap-4">
+        <div>
+          <p>
+            Copyright <strong>LIFE RIO ASSISTÊNCIA EM SAÚDE LTDA</strong> 2025 –
+            Todos os direitos reservados.
+          </p>
+          <p className="underline">Desenvolvido por Lighthouse Dev</p>
+        </div>
+
+        <div>
+          <p>
+            <strong>RAZÃO SOCIAL</strong>: LIFE RIO ASSISTÊNCIA EM SAÚDE LTDA.
+          </p>
+          <p>CNPJ: 33.141.166/0001-87</p>
         </div>
       </section>
     </footer>

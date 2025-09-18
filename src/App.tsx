@@ -7,7 +7,6 @@ import AsideMenu from "./components/AsideMenu";
 import { useDeviceWidth } from "./hooks/useDeviceWidth";
 import { useAsideMenu } from "./hooks/useAsideMenu";
 import Footer from "./components/Footer";
-import TesteCarrossel from "./components/TesteCarrossel";
 
 function App() {
   const { isOpen, handleOpenMenu } = useAsideMenu();
@@ -15,12 +14,6 @@ function App() {
   return (
     <>
       <main className="relative font-open-sans">
-        {/* TODO: Buscar sobre quais meta tags são essenciais para utilizar */}
-        {/* TODO: Adicionar aba Trabalhe conosco*/}
-        {/* TODO: Depoimentos reais na aba sobre nós e remover o vídeo */}
-        {/* TODO: Adicionar muleta ao carrossel */}
-        {/* TODO: Nova página Life Kids */}
-        {/* TODO: Remover localização */}
         <meta
           name="description"
           content="A Life Rio é uma empresa de que visa prestar o serviço de atenção domiciliar de forma segura, qualificada e humanizada, possibilitando a desospitalização e manutenção do cuidado do paciente em domicílio."
@@ -37,7 +30,7 @@ function App() {
           )}
         </AnimatePresence>
         <Outlet />
-      <TesteCarrossel />
+
         <BackToTopButton />
       </main>
       <Footer />

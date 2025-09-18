@@ -9,7 +9,7 @@ import NavigationError from "./components/NavigationError.tsx";
 const LazyHome = React.lazy(() => import("./pages/Home"));
 const LazyContact = React.lazy(() => import("./pages/Contact"));
 const LazyOurServices = React.lazy(() => import("./pages/OurServices"));
-const LazyAboutUs = React.lazy(() => import("./pages/AboutUs"));
+const LazyAboutUs = React.lazy(() => import("./pages/WhoWeAre.tsx"));
 const LazyWorkWithUs = React.lazy(() => import("./pages/WorkWithUs.tsx"));
 const LazyLifeKids = React.lazy(() => import("./pages/LifeKids.tsx"));
 
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "sobre",
+        path: "quem-somos",
         element: (
           <Suspense fallback={<Loading />}>
             <LazyAboutUs />

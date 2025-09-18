@@ -1,6 +1,10 @@
+import { useRef } from "react";
 import Link from "./Link";
-
+import areaDeAtendimento from "/area de atendimento.webp";
+import { motion } from "framer-motion";
+import handleFullScreen from "../utils/handleFullScreen";
 export default function Location() {
+  const imageRef = useRef<HTMLImageElement | null>(null);
   return (
     <section className="p-8 lg:p-10">
       <h3 className="text-primary-color text-mobile font-bold mb-4 lg:text-desktop-title">
@@ -18,18 +22,27 @@ export default function Location() {
             assistência até o conforto do seu lar.
           </p>
 
-          <Link targetBlank linkType="link" href="http://wa.me/5521969672912">Área de atendimento</Link>
+          <Link targetBlank linkType="link" href="http://wa.me/5521969672912">
+            Área de atendimento
+          </Link>
         </div>
 
-        <iframe
-          className="border-none w-full rounded-2xl"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d235182.6994523599!2d-43.6347887!3d-22.9233394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fc307072ceb%3A0x7a81ba4169e4d8b3!2sGrupo%20Life%20Rio%20Assist%C3%AAncia%20em%20Sa%C3%BAde!5e0!3m2!1spt-BR!2sbr!4v1753879206267!5m2!1spt-BR!2sbr"
-          width="600"
-          height="450"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div>
+          <motion.img
+            ref={imageRef}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="shadow-lg"
+            src={areaDeAtendimento}
+            alt="Mapa da área de atendimento no Rio de Janeiro da Life Rio."
+            onTap={() => {
+              if (imageRef.current) {
+                handleFullScreen(imageRef.current);
+              }
+            }}
+          />
+        </div>
       </div>
     </section>
   );

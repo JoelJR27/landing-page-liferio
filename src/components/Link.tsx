@@ -13,7 +13,7 @@ export default function Link({
 }: LinkProps) {
   const linkTypes = {
     link: "bg-secondary-color w-fit p-2 font-bold text-white rounded",
-    iconButton: "text-lg text-white xl:text-desktop-subtitle 2xl:text-desktop-title",
+    iconButton: "text-xl text-white lg:text-[18px] xl:text-desktop-subtitle 2xl:text-[24px]",
   };
   return (
     <>

@@ -1,7 +1,7 @@
 export default function NavigationError() {
   return (
     <section className="h-screen w-full p-4 flex justify-center items-center font-open-sans">
-      <div>
+      <div className="text-center">
         <h1 className="text-center text-red-500 font-black text-desktop-subtitle md:text-desktop-title">
           Ops! Algo deu errado
         </h1>

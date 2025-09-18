@@ -8,12 +8,12 @@ export default function Products() {
     "/andador.webp",
     "/cadeira-de-rodas.webp",
     "/cadeira-higienica.webp",
-    "/concentrador-de-oxigenio.jpg",
+    "/concentrador-de-oxigenio.webp",
     "/cama-hospitalar.webp",
-    "/andador.webp",
+    "/muletas.webp",
   ];
   return (
-    <section className="p-4 mb-10 lg:p-8">
+    <section className="p-4 mb-10 lg:p-8 lg:flex flex-col items-center justify-center">
       <h3 className="text-primary-color text-center text-mobile font-bold lg:text-desktop-title mb-8">
         Aluguel de materiais hospitalares
       </h3>
@@ -29,15 +29,13 @@ export default function Products() {
         modules={[Navigation, Pagination, EffectFade, Mousewheel, Parallax]}
         navigation
         pagination={{ clickable: true }}
-        breakpoints={{
-          320: { spaceBetween: 40 },
-          650: { spaceBetween: 30 },
-          1000: { spaceBetween: 20 },
-        }}
+        className="w-auto max-w-[700px]"
       >
         {imagesArray.map((image, index) => (
-          <SwiperSlide key={index}>
-            <SwiperImage imagePath={image} />
+          <SwiperSlide key={index} className="flex justify-center items-center">
+            <div className="p-10 h-full">
+              <SwiperImage imagePath={image} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -50,7 +48,7 @@ function SwiperImage({ imagePath }: SwiperImageProps) {
   return (
     <img
       key={imagePath}
-      className="rounded-2xl shadow-lg max-w-[250px]"
+      className="rounded-2xl shadow-lg min-h-[220px] max-w-[250px] max-h-[220px] mx-auto"
       src={imagePath}
       alt="Carrossel com imagens dos produtos ofertados pela Life Rio"
       loading="lazy"

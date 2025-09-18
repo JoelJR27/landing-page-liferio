@@ -1,3 +1,4 @@
+import servicesImage from "/servicos-imagem.webp";
 import { RiTeamLine } from "react-icons/ri";
 import { FaHandHoldingMedical, FaNotesMedical, FaPlus } from "react-icons/fa";
 import { FaPersonShelter } from "react-icons/fa6";
@@ -12,7 +13,7 @@ export default function Services() {
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
         <img
           className="rounded-xl"
-          src="/servicos-imagem.jpg"
+          src={servicesImage}
           alt="Imagem de um idoso recebendo cuidados em sua casa."
           loading="lazy"
         />

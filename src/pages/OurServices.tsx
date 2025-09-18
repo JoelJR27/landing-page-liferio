@@ -1,5 +1,6 @@
+import servicesBackground from "/fundo-servicos.webp";
 import ServicesCard from "../components/ServicesCard";
-import { RiTeamFill } from "react-icons/ri";
+import { MdOutlinePersonalInjury } from "react-icons/md";
 import { TbVaccine } from "react-icons/tb";
 import { FaUserDoctor, FaXRay } from "react-icons/fa6";
 import { BiClinic } from "react-icons/bi";
@@ -8,10 +9,10 @@ import { CiBandage } from "react-icons/ci";
 export default function OurServices() {
   return (
     <>
-      <section className="flex flex-col items-center md:p-10 lg:px-20 xl:px-20">
+      <section className="flex flex-col items-center">
         <img
-          className="md:rounded-2xl"
-          src="/fundo-servicos.png"
+          className=" shadow-lg w-full h-60 object-cover xl:h-78"
+          src={servicesBackground}
           alt="Médico segurando uma prancheta."
           loading="lazy"
         />
@@ -20,34 +21,34 @@ export default function OurServices() {
         </h1>
         <section className="p-4 xsm:p-8 flex flex-col gap-10 md:grid md:grid-cols-2 xl:grid-cols-3">
           <ServicesCard
-            icon={<RiTeamFill />}
-            title="Equipe multidisciplinar"
-            text="Contamos com uma equipe capacitada, com atendimento personalizado para cada paciente."
+            icon={<MdOutlinePersonalInjury />}
+            title="Tratamentos de lesões"
+            text="Oferecemos um cuidado personalizado para cada tipo de ferida, com profissionais qualificados prontos para ajudar garantindo o melhor para sua recuperação."
           />
           <ServicesCard
             icon={<TbVaccine />}
-            title="Aplicação de medicamentos em domicílio"
-            text="Aplicações de medicamentos em domicílio, proporcionam um tratamento mais seguro e com menos exposição à infecções hospitalares."
+            title="Aplicação de medicamentos"
+            text="Aplicações de medicamentos, proporcionam um tratamento mais seguro e com menos exposição à infecções hospitalares."
           />
           <ServicesCard
             icon={<FaUserDoctor />}
-            title="Cuidadores capacitados"
-            text="Na Life Rio você pode contar com nossa equipe de cuidadores supervisionados, capacitados e preparados para atender as mais diversas necessidades de cuidados."
+            title="Cuidados paliativos"
+            text="Os cuidados paliativos oferecem conforto e dignidade aos pacientes e suas famílias, focando na qualidade de vida em momentos difíceis. Com uma equipe multidisciplinar formada por médicos, enfermeiros e psicólogos, essa abordagem holística atende às necessidades físicas, emocionais, sociais e espirituais."
           />
           <ServicesCard
             icon={<CiBandage />}
-            title="Planos personalizados"
-            text="Proporcionamos assistência personalizada conforme a necessidade de cada paciente, seja durante o dia, à noite ou até mesmos aos finas de semana."
+            title="Internação domiciliar"
+            text="Tudo o que é necessário para facilitar e promover a recuperação do paciente em um ambiente familiar e acolhedor. A internação domiciliar consiste na implementação de uma estrutura hospitalar completa na residência do paciente. Isso inclui a disponibilização de cama hospitalar, cadeira de rodas, cadeira, além da assistência de enfermeiros, médicos, fisioterapeutas, psicólogos e outros profissionais de saúde."
           />
           <ServicesCard
             icon={<BiClinic />}
-            title="Atendimento residencial e hospitalar "
+            title="Atendimento domiciliar e hospitalar."
             text="O Home Care proporciona uma jornada de tratamento mais calma e confortável para o paciente. O atendimento domiciliar faz com que o paciente tenha um tratamento humanizado e a consequência é a melhora no quadro clínico.
 "
           />
           <ServicesCard
             icon={<FaXRay />}
-            title="Raio-X Domiciliar"
+            title="Raio-X domiciliar"
             text="Em cada visita domiciliar, a excelência do atendimento em Home Care se faz presente. Com o raio-x móvel, garantimos diagnósticos precisos e ágeis, fundamentais para um cuidado eficaz e personalizado.
 "
           />

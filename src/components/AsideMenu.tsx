@@ -21,7 +21,7 @@ export default function AsideMenu() {
           </li>
           <li>
             <Link targetBlank={false} linkType="iconButton" href={"/contatos"}>
-              Contatos
+              Fale conosco
             </Link>
           </li>
           <li>
@@ -30,8 +30,12 @@ export default function AsideMenu() {
             </Link>
           </li>
           <li>
-            <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
-              Sobre nós
+            <Link
+              targetBlank={false}
+              linkType="iconButton"
+              href={"/quem-somos"}
+            >
+              Quem Somos
             </Link>{" "}
           </li>
           <li>

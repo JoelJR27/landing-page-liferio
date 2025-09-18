@@ -1,6 +1,7 @@
 import { Accordions } from "../components/Accordion";
 import Hero from "../components/Hero";
 import InfosBanner from "../components/InfosBanner";
+import Location from "../components/Location";
 import Products from "../components/Products";
 import Services from "../components/Services";
 
@@ -35,6 +36,7 @@ export default function Home() {
           </Accordions.Accordion>
         </Accordions.Divider>
       </Accordions.Container>
+      <Location />
     </>
   );
 }

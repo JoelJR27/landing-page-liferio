@@ -1,4 +1,4 @@
-import logoLiferio from "/logo-liferio.jpeg";
+import logoLiferio from "/logo-liferio.webp";
 import Link from "../components/Link";
 import { useDeviceWidth } from "../hooks/useDeviceWidth";
 import { FiInstagram } from "react-icons/fi";
@@ -20,7 +20,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
       className="bg-primary-color sticky top-0 flex z-10 justify-between items-center px-4 shadow-2xl lg:justify-around"
     >
       <button
-        className="text-white text-4xl cursor-pointer lg:hidden"
+        className="text-white text-5xl cursor-pointer lg:hidden"
         onClick={handleMenu}
       >
         <AnimatePresence>
@@ -28,7 +28,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
         </AnimatePresence>
       </button>
       {deviceWidth >= 1024 && (
-        <nav className="font-open-sans text-center text-white font-semibold text-desktop-subtitle flex">
+        <nav className="font-open-sans text-center text-white font-semibold flex">
           <ul className="flex gap-6 xl:gap-8">
             <li>
               <Link targetBlank={false} linkType="iconButton" href="/">
@@ -41,7 +41,7 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
                 linkType="iconButton"
                 href={"/contatos"}
               >
-                Contatos
+                Fale conosco
               </Link>
             </li>
             <li>
@@ -50,12 +50,12 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
                 linkType="iconButton"
                 href={"/servicos"}
               >
-                Serviços
+               Serviços
               </Link>
             </li>
             <li>
-              <Link targetBlank={false} linkType="iconButton" href={"/sobre"}>
-                Sobre nós
+              <Link targetBlank={false} linkType="iconButton" href={"/quem-somos"}>
+                Quem Somos
               </Link>{" "}
             </li>
             <li>
@@ -79,9 +79,9 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
           </ul>
         </nav>
       )}
-      <div className="flex text-4xl gap-4">
+      <div className="flex text-4xl gap-1">
         {deviceWidth >= 1024 && (
-          <div className="flex gap-2 items-center text-desktop-subtitle text-white">
+          <div className="flex gap-2 items-center text-white">
             <Link
               targetBlank
               linkType="iconButton"
@@ -106,12 +106,12 @@ export default function Header({ isOpen, handleMenu }: HeaderProps) {
           </div>
         )}
         <img
-          className="w-[100px] h-[100px]"
+          className="w-[120px] h-[120px] lg:w-[150px] lg:h-[150px]"
           src={logoLiferio}
           alt="Logo da Life Rio"
           loading="lazy"
         />
       </div>
     </motion.header>
-  );
+  )
 }
